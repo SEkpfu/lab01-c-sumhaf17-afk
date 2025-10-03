@@ -1,26 +1,22 @@
 #include <stdio.h>
+int main ()
+{
+    double x, y, z;
+    printf ("x=");
+    scanf("%lf", &x);
+    printf("y=");
+    scanf("%lf", &y);
+    printf("z=");
+    scanf("%lf", &z);
+    if ((x+y>z) && (z+x>y) && (z+y>x))
+    printf("Треугольник существует\n");
+    else 
+    printf("Треугольник не существует\n");
 
-#define _USE_MATH_DEFINES
-#include <math.h>
-
-int main() {
-    double a, b, c, vol, s_a;
-
-    printf("Введите длины ребер прямоугольного параллепипеда  \n");
-    printf("а = \n");
-    scanf("%lf ", &a);
-
-    printf("b = \n");
-    scanf("%lf ", &b);
-
-    printf("c = \n");
-    scanf("%lf ", &c);
-
-    vol = a * b * c;
-    s_a = 2 * (a*b + b*c + a*c);
-    
-    printf("Объем = %lf\n", vol);
-    printf("Площадь поверхности %lf \n", s_a);
-    
+    if ((x == y) || (y == z) || (x == z))
+    printf("Треугольник равнобедренный");
+        else 
+     printf("Треугольник не равнобедренный");
     return 0;
+
 }
